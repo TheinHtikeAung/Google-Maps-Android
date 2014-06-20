@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clouds" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/layout_border"
+        android:padding="10dp" 
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/search_24" />
+
+        <EditText
+            android:id="@+id/txtSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.55"
+            android:background="@drawable/textview_border"
+            android:ellipsize="end"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="Search"
+            android:imeOptions="actionSearch"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/asbestos"
+            android:textSize="16sp" 
+            >
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/btnClear"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/multiply_24" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_border"
+            android:text="Cancel" 
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_margin="10dp"
+        android:background="@color/WhiteSmoke"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+    </ListView>
+
+</RelativeLayout>

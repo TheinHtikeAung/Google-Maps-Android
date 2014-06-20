@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/White"
+	android:clickable="true"
+	android:focusable="false"
+    >
+    <!--     android:background="#eeeeee" -->
+    
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+        
+        <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="48 min"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="@color/Green"
+        />
+
+	    <TextView
+	        android:id="@+id/txtDistance"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_toRightOf="@+id/txtTime"
+	        android:text="(3.9 km)"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+	        android:textColor="@color/Gray"
+	        android:layout_marginLeft="10dp"
+	        />
+	    
+	    <TextView
+	        android:id="@+id/txtAddress"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/linearMiddle"
+	        android:text="Via Commonwealth Ave West"
+	        android:textAppearance="?android:attr/textAppearanceSmall" 
+	        android:layout_marginTop="5dp"
+	        android:textColor="@color/Gray"
+	        />
+
+	    <LinearLayout
+	        android:id="@+id/linearMiddle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/txtTime" 
+	        android:orientation="horizontal"
+	        >
+	        
+	    </LinearLayout>
+
+	</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White" >
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/Silver" />
+
+        <LinearLayout
+            android:id="@+id/linearWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/view1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/warning2" />
+
+            <TextView
+                android:id="@+id/txtWarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="This route has trolls."
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Gray"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/linearWarning"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:visibility="invisible" >
+
+        </ListView>
+
+        
+		
+
+		<ScrollView
+		    android:id="@+id/scrollView"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignTop="@+id/linearWarning" >
+
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:orientation="vertical" >
+		        
+		        <include layout="@layout/route_listitem2"/>
+		        
+		    </LinearLayout>
+		</ScrollView>
+       
+    </RelativeLayout>
+
+</LinearLayout>
