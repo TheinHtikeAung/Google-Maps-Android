@@ -23,11 +23,12 @@ Your google api project console must open the following API.
 **3.Change your browser api key in `helpler -> SH.java`**  
 
     public static final String MAP_BROWSER_KEY = "<FILL BROWSER API KEY>";
+
 **4.Change your android api key in `AndroidManifest.xml`**
-   
-   `<meta-data
-		android:name="com.google.android.maps.v2.API_KEY"                  
-            android:value="AIzaSyBy1aq_DXXZqxseA1A1kTofylhSqQF9fzg"/>`
+       
+      <meta-data
+    	android:name="com.google.android.maps.v2.API_KEY"
+        android:value="AIzaSyBy1aq_DXXZqxseA1A1kTofylhSqQF9fzg"/>
 
 
 Preview
