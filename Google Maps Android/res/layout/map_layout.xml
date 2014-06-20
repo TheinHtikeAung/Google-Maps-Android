@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    
+    >
+    
+    <fragment
+          android:id="@+id/map"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          class="com.google.android.gms.maps.SupportMapFragment"
+          android:name="com.theinhtikeaung.googlemapsandroid"
+          />
+
+    <LinearLayout
+        android:id="@+id/linearSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" 
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/layout_border"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relative1"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            >
+            
+            <ProgressBar
+	            android:id="@+id/progressBar"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp" 
+	            android:visibility="invisible"
+	            />
+
+	        <ImageView
+	            android:id="@+id/imgSearch"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:src="@drawable/search_24" 
+	            android:padding="7dp"
+	            />
+            
+        </RelativeLayout>
+        
+        <AutoCompleteTextView
+            android:id="@+id/txtSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.55"
+            android:background="@drawable/textview_border"
+            android:editable="false"
+            android:ellipsize="end"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="Search"
+            android:imeOptions="actionSearch"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/asbestos"
+            android:textSize="16sp" 
+            android:padding="10dp"
+            
+            >
+
+        </AutoCompleteTextView> 
+        
+
+        <ImageButton
+            android:id="@+id/btnRoute"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/map_marker" 
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:padding="7dp"
+            />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearFromTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" 
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/layout_border"
+        android:padding="5dp"
+        android:visibility="invisible"
+        >
+
+        <ImageView
+            android:id="@+id/imgMode"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/bus_64" 
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/relativeFromTo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" 
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="From "
+                android:textSize="12sp" 
+                android:textColor="@color/Gray"
+                />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="To "
+                android:textAppearance="?android:attr/textAppearanceSmall" 
+                android:textSize="12sp"
+                android:textColor="@color/Gray"
+                />
+
+            <TextView
+                android:id="@+id/txtFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textView1"
+                android:text="Admiralty"
+                android:textAppearance="?android:attr/textAppearanceSmall" 
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/txtTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/textView2"
+                android:text="Clementi"
+                android:textAppearance="?android:attr/textAppearanceSmall" 
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgClear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/multiply_24" 
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
