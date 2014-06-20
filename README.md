@@ -1,7 +1,7 @@
 Google Maps Android
 ===================
 
-My try to make look like official Google Maps app
+> My try to make look like official Google Maps app
 
 
 Usage
